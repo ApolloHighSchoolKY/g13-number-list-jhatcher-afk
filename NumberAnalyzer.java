@@ -48,10 +48,13 @@ public class NumberAnalyzer
 	public int countOdds()
 	{
       	int oddCount=0;
+		//For each Number we will refer to as item in the Arraylist called list
 		for(Number item: list)
 		{
+			//method call to isOdd if item is odd
 			if(item.isOdd())
 			{
+				//if true count increases by 1
 				oddCount++;
 			}
 		}
@@ -62,10 +65,13 @@ public class NumberAnalyzer
 	public int countEvens()
 	{
       	int evenCount=0;
+		//For each Number we will refer to as item in the Arraylist called list
 		for(Number item: list)
 		{
+			//method call to isOdd if item is not odd
 			if(!item.isOdd())
 			{
+				//if true count increases by 1
 				evenCount++;
 			}
 		}
@@ -83,10 +89,13 @@ public class NumberAnalyzer
 	public int countPerfects()
 	{
       	int perfectCount=0;
+		//For each Number we will refer to as item in the Arraylist called list
 		for(Number item: list)
 		{
+			//method call to isPerfect if item is perfect
 			if(item.isPerfect())
 			{
+				//if true count increases by 1
 				perfectCount++;
 			}
 		}
