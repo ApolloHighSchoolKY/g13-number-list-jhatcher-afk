@@ -22,29 +22,39 @@ public class NumberAnalyzer
 	public NumberAnalyzer(String numbers)
 	{
 		//Make the list exist first
-
+		list = new ArrayList<Number>();
 		//Filter the parameter through to the set method
-
+		setList(numbers);
 	}
 
 	//Methods
 	public void setList(String numbers)
 	{
 		//Clear the list
-
+		list.clear();
 
 		//Create a scanner to chop up the string of numbers
-
+		Scanner chopper = new Scanner(numbers);
 
 		//Chop up the string
+		while(chopper.hasNextInt())
+		{
+			list.add(new Number(chopper.nextInt()));
 
+		}
 
 	}
 
 	public int countOdds()
 	{
       	int oddCount=0;
-
+		for(Number item: list)
+		{
+			if(item.isOdd())
+			{
+				oddCount++;
+			}
+		}
 
       	return oddCount;
 	}
@@ -52,7 +62,13 @@ public class NumberAnalyzer
 	public int countEvens()
 	{
       	int evenCount=0;
-
+		for(Number item: list)
+		{
+			if(!item.isOdd())
+			{
+				evenCount++;
+			}
+		}
 
       	return evenCount;
 
@@ -67,7 +83,13 @@ public class NumberAnalyzer
 	public int countPerfects()
 	{
       	int perfectCount=0;
-
+		for(Number item: list)
+		{
+			if(item.isPerfect())
+			{
+				perfectCount++;
+			}
+		}
 
       	return perfectCount;
 	}
