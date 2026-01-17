@@ -19,6 +19,18 @@ public class Lab16b
 
 
 		//add more test cases
+		NumberAnalyzer testTwo = new NumberAnalyzer("6 7 12 4 23 78 45 63");
+		System.out.println(testTwo);
+		System.out.println("odd count = "+testTwo.countOdds());
+		System.out.println("even count = "+testTwo.countEvens());
+		System.out.println("perfect count = "+testTwo.countPerfects()+"\n\n");
+
+		NumberAnalyzer testThree = new NumberAnalyzer("6 14 12 76 11 44 86 68");
+		System.out.println(test);
+		System.out.println("odd count = "+testThree.countOdds());
+		System.out.println("even count = "+testThree.countEvens());
+		System.out.println("perfect count = "+testThree.countPerfects()+"\n\n");
+
 
 
 	}
